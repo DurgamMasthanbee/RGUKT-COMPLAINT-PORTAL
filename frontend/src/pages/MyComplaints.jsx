@@ -21,7 +21,7 @@ export default function MyComplaints() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5000/api/complaints?email=${user.email}`
+        `https://rgukt-complaint-portal.onrender.com//api/complaints?email=${user.email}`
       );
       setComplaints(res.data);
       setFilteredComplaints(res.data);

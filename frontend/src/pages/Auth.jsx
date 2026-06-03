@@ -71,7 +71,7 @@ export default function Auth() {
     try {
       if (isLogin) {
         const res = await axios.post(
-          "http://localhost:5000/api/users/login",
+          "https://rgukt-complaint-portal.onrender.com//api/users/login",
           {
             email: form.email,
             password: form.password,
@@ -83,7 +83,7 @@ export default function Auth() {
 
       } else {
         await axios.post(
-          "http://localhost:5000/api/users/signup",
+          "https://rgukt-complaint-portal.onrender.com//api/users/signup",
           {
             fullName: form.fullName,
             studentId: form.studentId,

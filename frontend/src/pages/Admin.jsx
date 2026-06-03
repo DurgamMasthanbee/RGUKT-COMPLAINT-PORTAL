@@ -132,7 +132,7 @@ export default function Admin() {
   const updateStatus = async (id, status) => {
     const token = localStorage.getItem("token");
     await axios.put(
-      `http://localhost:5000/api/complaints/${id}`,
+      `https://rgukt-complaint-portal.onrender.com//api/complaints/${id}`,
       { status },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -149,7 +149,7 @@ export default function Admin() {
   const handleUpdate = async () => {
     const token = localStorage.getItem("token");
     await axios.put(
-      `http://localhost:5000/api/complaints/${selectedComplaint._id}`,
+      `https://rgukt-complaint-portal.onrender.com//api/complaints/${selectedComplaint._id}`,
       { status: newStatus, comment },
       { headers: { Authorization: `Bearer ${token}` } }
     );
