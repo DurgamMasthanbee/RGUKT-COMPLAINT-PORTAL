@@ -1,0 +1,28 @@
+# Query: localhost
+
+9 results - 8 files
+
+UPGRADE_SUMMARY.md:
+  200: - **Base URL Configuration** - `https://rgukt-complaint-portal.onrender.com//api/*` ready for production setup
+  338: **Frontend Development Server**: Running on `http://localhost:5174/`
+
+backend\server.js:
+  45: app.use(cors({ origin: "http://localhost:5173" }));
+
+frontend\src\pages\Admin.jsx:
+  99:     const res = await axios.get("https://rgukt-complaint-portal.onrender.com//api/complaints", {
+
+frontend\src\pages\AdminLogin.jsx:
+  11:       const res = await fetch("https://rgukt-complaint-portal.onrender.com//api/admin/login", {
+
+frontend\src\pages\EditComplaint.jsx:
+  18:       `https://rgukt-complaint-portal.onrender.com//api/complaints/${form._id}`,
+
+frontend\src\pages\EditProfile.jsx:
+  19:         `https://rgukt-complaint-portal.onrender.com//api/users/update/${form._id}`,
+
+frontend\src\pages\Home.jsx:
+  104:         const res = await fetch("https://rgukt-complaint-portal.onrender.com//api/complaints");
+
+frontend\src\pages\MyComplaints.jsx:
+  65:       await axios.delete(`https://rgukt-complaint-portal.onrender.com//api/complaints/${id}`);

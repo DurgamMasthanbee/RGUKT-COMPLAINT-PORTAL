@@ -197,7 +197,7 @@ Successfully transformed the RGUKT Complaint Portal from a basic application int
 ### 🔄 **16. Integration Architecture**
 - **API-Ready Design** - All forms and pages configured for backend API calls
 - **Axios Integration** - HTTP client for REST API communication
-- **Base URL Configuration** - `http://localhost:5000/api/*` ready for production setup
+- **Base URL Configuration** - `http://https://rgukt-complaint-portal.onrender.com/api/*` ready for production setup
 - **FormData Support** - Multipart form data for file uploads
 - **Error Handling** - Try-catch blocks and user-friendly error messages
 
