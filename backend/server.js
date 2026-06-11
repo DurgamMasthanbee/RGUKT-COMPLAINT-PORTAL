@@ -47,7 +47,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/admin", adminRoutes);
-app.use("/api/auth", authRoutes);
+app.use("//auth", authRoutes);
 app.use("/api/complaints", complaintRoutes);
 app.use("/api/users", userRoutes);
 

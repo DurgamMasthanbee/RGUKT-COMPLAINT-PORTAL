@@ -35,7 +35,7 @@ export default function TrackComplaint() {
 
     try {
       const res = await axios.get(
-        `https://rgukt-complaint-portal.onrender.com//api/complaints/${complaintId}`
+        `https://rgukt-complaint-portal.onrender.com/api/complaints/${complaintId}`
       );
       setComplaint(res.data);
     } catch (err) {

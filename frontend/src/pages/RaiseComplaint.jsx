@@ -71,7 +71,7 @@ export default function RaiseComplaint() {
       });
 
       const res = await axios.post(
-        "https://rgukt-complaint-portal.onrender.com//api/complaints",
+        "https://rgukt-complaint-portal.onrender.com/api/complaints",
         formData,
         {
           headers: {

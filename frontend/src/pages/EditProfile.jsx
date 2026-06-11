@@ -16,7 +16,7 @@ export default function EditProfile() {
   const handleUpdate = async () => {
     try {
       const res = await axios.put(
-        `https://rgukt-complaint-portal.onrender.com//api/users/update/${form._id}`,
+        `https://rgukt-complaint-portal.onrender.com/api/users/update/${form._id}`,
         form
       );
 

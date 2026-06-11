@@ -25,13 +25,13 @@ export default function Profile() {
       try {
         // Fetch user details
         const userRes = await axios.get(
-          `https://rgukt-complaint-portal.onrender.com//api/users/me?email=${localUser.email}`
+          `https://rgukt-complaint-portal.onrender.com/api/users/me?email=${localUser.email}`
         );
         setUser(userRes.data);
 
         // Fetch complaint statistics
         const token = localStorage.getItem("token");
-        const complaintsRes = await axios.get("https://rgukt-complaint-portal.onrender.com//api/complaints", {
+        const complaintsRes = await axios.get("https://rgukt-complaint-portal.onrender.com/api/complaints", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

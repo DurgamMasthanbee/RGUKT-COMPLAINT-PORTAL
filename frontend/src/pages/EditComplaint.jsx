@@ -15,7 +15,7 @@ export default function EditComplaint() {
 
   const handleUpdate = async () => {
     await axios.put(
-      `https://rgukt-complaint-portal.onrender.com//api/complaints/${form._id}`,
+      `https://rgukt-complaint-portal.onrender.com/api/complaints/${form._id}`,
       form
     );
 
