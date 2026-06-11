@@ -70,18 +70,21 @@ export default function Auth() {
 
     try {
       if (isLogin) {
-        const res = await axios.post(
-          "https://rgukt-complaint-portal.onrender.com/api/users/login",
-          {
-            email: form.email,
-            password: form.password,
-          }
-        );
+  const res = await axios.post(
+    "https://rgukt-complaint-portal.onrender.com/api/users/login",
+    {
+      email: form.email,
+      password: form.password,
+    }
+  );
 
-        localStorage.setItem("user", JSON.stringify(res.data.user));
-        window.dispatchEvent(new Event("storage"));
+  localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      } else {
+  navigate("/profile");
+  window.location.reload();
+
+  return;
+}else {
         await axios.post(
           "https://rgukt-complaint-portal.onrender.com/api/users/signup",
           {

@@ -13,16 +13,26 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
+  const loadUser = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
+  };
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+  loadUser();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("storage", loadUser);
+
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("storage", loadUser);
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
