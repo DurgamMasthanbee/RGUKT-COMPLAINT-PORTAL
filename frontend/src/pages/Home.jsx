@@ -101,7 +101,7 @@ export default function Home() {
   useEffect(() => {
     const fetchLatestComplaints = async () => {
       try {
-        const res = await fetch("http://https://rgukt-complaint-portal.onrender.com/api/complaints");
+        const res = await fetch("https://rgukt-complaint-portal.onrender.com/api/complaints");
         const data = await res.json();
 
         const total = data.length;

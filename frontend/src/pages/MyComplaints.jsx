@@ -62,7 +62,7 @@ export default function MyComplaints() {
     }
 
     try {
-      await axios.delete(`http://https://rgukt-complaint-portal.onrender.com/api/complaints/${id}`);
+      await axios.delete(`https://rgukt-complaint-portal.onrender.com/api/complaints/${id}`);
       fetchComplaints();
     } catch (err) {
       console.error("Error deleting complaint:", err);

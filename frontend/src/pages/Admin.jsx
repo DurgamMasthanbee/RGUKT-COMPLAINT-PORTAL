@@ -96,7 +96,7 @@ export default function Admin() {
   const fetchComplaints = async () => {
     const token = localStorage.getItem("token");
 
-    const res = await axios.get("http://https://rgukt-complaint-portal.onrender.com/api/complaints", {
+    const res = await axios.get("https://rgukt-complaint-portal.onrender.com/api/complaints", {
       headers: { Authorization: `Bearer ${token}` },
     });
 

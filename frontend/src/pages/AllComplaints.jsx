@@ -4,7 +4,7 @@ export default function AllComplaints() {
   const [complaints, setComplaints] = useState([]);
 
   useEffect(() => {
-    fetch("http://:5000/api/complaints")
+    fetch("https://rgukt-complaint-portal.onrender.com/api/complaints")
       .then(res => res.json())
       .then(data => setComplaints(data))
       .catch(err => console.log(err));
