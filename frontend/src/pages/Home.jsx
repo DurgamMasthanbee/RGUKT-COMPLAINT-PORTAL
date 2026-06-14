@@ -19,6 +19,8 @@ import {
   Rocket,
 } from "lucide-react";
 
+const navigate = useNavigate();
+
 import Button from "../components/Button";
 import Card from "../components/Card";
 
@@ -56,12 +58,30 @@ const workflowSteps = [
 ];
 
 const benefitCards = [
-  "Transparent Tracking",
-  "Fast Resolution",
-  "Secure Complaint System",
-  "Real-Time Status Updates",
-  "Student Friendly Interface",
-  "Department Accountability",
+  {
+    title: "Transparent Tracking",
+    path: "/track",
+  },
+  {
+    title: "Fast Resolution",
+    path: "/all-complaints",
+  },
+  {
+    title: "Secure Complaint System",
+    path: "/auth",
+  },
+  {
+    title: "Real-Time Status Updates",
+    path: "/track",
+  },
+  {
+    title: "Student Friendly Interface",
+    path: "/raise",
+  },
+  {
+    title: "Department Accountability",
+    path: "/contact",
+  },
 ];
 
 export default function Home() {
@@ -432,14 +452,18 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {benefitCards.map((value) => (
+          {benefitCards.map((item) => (
             <motion.div
-              key={value}
+              key={item.title}
+              onClick={() => navigate(item.path)}
               whileHover={{ y: -6, scale: 1.01 }}
-              className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="cursor-pointer rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300"
             >
+             
               <p className="text-2xl mb-3">✓</p>
-              <h3 className="text-xl font-semibold text-white">{value}</h3>
+              <h3 className="text-xl font-semibold text-white">
+                {item.title}
+              </h3>
             </motion.div>
           ))}
         </div>
