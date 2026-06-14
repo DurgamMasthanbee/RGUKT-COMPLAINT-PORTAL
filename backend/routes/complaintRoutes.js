@@ -1,10 +1,4 @@
 import express from "express";
-import {
-  createComplaint,
-  getComplaints,
-  getComplaintById,
-  updateComplaint,
-} from "../controllers/complaintController.js";
 
 import {
   createComplaint,
