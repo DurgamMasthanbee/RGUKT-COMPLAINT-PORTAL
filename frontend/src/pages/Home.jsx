@@ -19,7 +19,6 @@ import {
   Rocket,
 } from "lucide-react";
 
-const navigate = useNavigate();
 
 import Button from "../components/Button";
 import Card from "../components/Card";
