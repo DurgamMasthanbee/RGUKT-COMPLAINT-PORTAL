@@ -149,7 +149,7 @@ export default function Admin() {
   const handleUpdate = async () => {
     const token = localStorage.getItem("token");
     await axios.put(
-      `https://rgukt-complaint-portal.onrender.com//api/complaints/${selectedComplaint._id}`,
+      `https://rgukt-complaint-portal.onrender.com/api/complaints/${selectedComplaint._id}`,
       { status: newStatus, comment },
       { headers: { Authorization: `Bearer ${token}` } }
     );

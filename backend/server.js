@@ -44,10 +44,11 @@ connectDB().then(async () => {
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/admin", adminRoutes);
-app.use("//auth", authRoutes);
+app.use("/auth", authRoutes);
 app.use("/api/complaints", complaintRoutes);
 app.use("/api/users", userRoutes);
 

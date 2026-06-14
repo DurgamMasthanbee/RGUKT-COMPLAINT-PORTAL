@@ -9,7 +9,13 @@ import {
 const router = express.Router();
 
 // ✅ CREATE COMPLAINT
-router.post("/", createComplaint);
+import upload from "../middleware/upload.js";
+
+router.post(
+  "/",
+  upload.array("attachments", 5),
+  createComplaint
+);
 
 // ✅ GET ALL OR USER COMPLAINTS
 router.get("/", getComplaints);
