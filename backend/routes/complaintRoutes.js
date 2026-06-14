@@ -6,6 +6,14 @@ import {
   updateComplaint,
 } from "../controllers/complaintController.js";
 
+import {
+  createComplaint,
+  getComplaints,
+  getComplaintById,
+  updateComplaint,
+  deleteComplaint,
+} from "../controllers/complaintController.js";
+
 const router = express.Router();
 
 // ✅ CREATE COMPLAINT
@@ -25,5 +33,8 @@ router.get("/:id", getComplaintById);
 
 // ✅ UPDATE STATUS (ADMIN)
 router.put("/:id", updateComplaint);
+
+// ✅ DELETE COMPLAINT
+router.delete("/:id", deleteComplaint);
 
 export default router;

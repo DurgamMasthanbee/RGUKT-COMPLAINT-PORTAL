@@ -5,6 +5,9 @@ import { v4 as uuidv4 } from "uuid";
 // ✅ CREATE COMPLAINT + EMAIL
 export const createComplaint = async (req, res) => {
   try {
+    console.log("BODY:", req.body);
+    console.log("FILES:", req.files);
+
     const complaintId = "RGUKT-" + uuidv4().slice(0, 8).toUpperCase();
 
     const complaint = await Complaint.create({
@@ -104,5 +107,25 @@ export const updateComplaint = async (req, res) => {
 
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+};
+
+export const deleteComplaint = async (req, res) => {
+  try {
+    const complaint = await Complaint.findByIdAndDelete(req.params.id);
+
+    if (!complaint) {
+      return res.status(404).json({
+        message: "Complaint not found",
+      });
+    }
+
+    res.json({
+      message: "Complaint deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
   }
 };
