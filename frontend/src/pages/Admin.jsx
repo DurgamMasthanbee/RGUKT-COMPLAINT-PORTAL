@@ -423,14 +423,6 @@ export default function Admin() {
                       >
                         View
                       </Button>
-                      <Button
-                        variant="glass"
-                        size="sm"
-                        className="text-sm px-3 py-2"
-                        onClick={() => updateStatus(c._id, "Resolved")}
-                      >
-                        Resolve
-                      </Button>
                     </div>
                   </div>
                 ))}
